@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Como sempre eu estou certo</title>
+  <style>
+    .questao {
+      text-align: center;
+      margin-top: 50px;
+    }
+    .btn1 {
+      display: inline-block;
+      padding: 20px 40px;
+      font-size: 18px;
+      margin: 10px;
+      cursor: pointer;
+      background-color: rgb(219, 52, 52);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      position: absolute;
+    }
+    .btn2 {
+      display: flex;
+      padding: 20px 40px;
+      font-size: 18px;
+      margin: 10px;
+      margin-left: 300px;
+      cursor: pointer;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+<div class="questao">
+  <h1>Quem é melhor?</h1>
+  <button class="btn2" id="btn1">Lin Dan</button>
+  <button class="btn1" id="btn2">Lee Chong Wei</button>
+</div>
+
+<script>
+  const btn1 = document.getElementById('btn1');
+  const btn2 = document.getElementById('btn2');
+  const janela = window.innerWidth / 2 - btn1.innerWidth
+
+  btn1.addEventListener('click', () => {
+    alert('The super Dan é o melhor não é mesmo :)');
+  });
+
+  btn2.addEventListener('mouseover', () => {
+    const randomX = Math.random() * (window.innerWidth - btn2.clientWidth);
+    const randomY = Math.random() * (window.innerHeight - btn2.clientHeight);
+    btn2.style.left = randomX + 'px';
+    btn2.style.top = randomY + 'px';
+  });
+</script>
+
+</body>
+</html>
